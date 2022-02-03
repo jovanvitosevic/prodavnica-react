@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Prodavnica from "./Prodavnica";
+import Korpa from "./Korpa";
 
 function App() {
+  const [korpa, setKorpa] = useState([]);
+  const dodajUKorpu = (proizvod, kolicina) => {
+    setKorpa([...korpa, { ...proizvod, kolicina }]);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/korpa">
+          <Korpa korpa={korpa} />
+        </Route>
+        <Route path="/">
+          <Prodavnica dodajUKorpu={dodajUKorpu} korpa={korpa} />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 

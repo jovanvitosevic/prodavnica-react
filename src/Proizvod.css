@@ -1,0 +1,18 @@
+.proizvodWrap {
+    border: 1px solid #dadada;
+    padding: 30px;
+    width: fit-content;
+    border-radius: 30px;
+    margin: 10px;
+}
+
+.ime {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.cena {
+    font-size: 18px;
+    font-weight: 700;
+}
