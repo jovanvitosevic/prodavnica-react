@@ -1,0 +1,31 @@
+.naslovKorpe {
+    font-weight: 800;
+    font-size: 18px;
+    padding: 20px;
+}
+
+
+.brojProizvoda {
+    font-weight: 700;
+    margin: 10px;
+    padding: 10px;
+    border-bottom: 1px solid #142041;
+}
+
+.ukupnaCena {
+    font-weight: 700;
+    margin: 10px;
+    padding: 10px;
+    border-bottom: 1px solid #142041;
+}
+
+.poruciDugme {
+    padding: 20px 30px;
+    margin: 10px;
+    border-radius: 25px;
+}
+
+.proizvodiNaKasi {
+    display: flex;
+    flex-wrap: wrap;
+}
