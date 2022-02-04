@@ -22,7 +22,7 @@ function Proizvod({ proizvod, dodajUKorpu, skloniIzmenuKolicine }) {
             className="kolicina"
             onChange={(e) => {
               const value = e.target.value;
-              if (value < 0) {
+              if (value <= 0) {
                 return;
               }
               setKolicina(value);
@@ -32,7 +32,7 @@ function Proizvod({ proizvod, dodajUKorpu, skloniIzmenuKolicine }) {
           />
           <Button
             label="Dodaj u korpu"
-            disabled={kolicina == 0}
+            disabled={!kolicina}
             className="dodajUKorpu"
             onClick={() => {
               dodajUKorpu(proizvod, kolicina);
